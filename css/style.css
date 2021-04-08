@@ -162,6 +162,7 @@ header .headerBox {
     margin: 3px;
     background: #fff;
     transition: all 0.3s;
+    height:250px;
 }
 #Portfolio .tab_container .wab>li:hover{
     transform: scale(1.2);
