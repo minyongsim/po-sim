@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+.row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row01{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+/*헤더 구역*/
+header {
+   position: fixed;
+   top: 0; right: 0; left: 0; 
+  z-index: 999999;
+}
+
+header .headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a > img{ 
+    height: 120px;
+    transition: all 0.5s;  
+}
+.logo a > img:hover {
+    transform: scale(1.2);
+
+}
+
+.menu>ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu>ul>li {
+    color: #949597;
+    margin: 10px 30px 10px 30px;
+    font-size: 30px;
+    font-family: 'Aleo', serif;
+    transition: all 0.2s;
+}
+
+.menu>ul>li:hover{ border-bottom:10px solid #ffcd2e; font-weight: bold;} 
+.menu>ul>li.on{ border-bottom:10px solid #ffcd2e; } 
+
+/*섹션구역*/
+#Contact {margin-top: 130px; }
+/*슬라이드*/
+#Portfolio .main_rolling .slide {  background-repeat:no-repeat;
+    background-size:cover; height:300px;  
+    background-position:top; position:relative }
+#Portfolio .main_rolling .slide1 { 
+      background-image:url(../img/silde1.jpg); }
+#Portfolio .main_rolling .slide2 { 
+      background-image:url(../img/slide2.jpg); }
+#Portfolio .main_rolling .slide3 { 
+      background-image:url(../img/slide3.jpg); }
+#Portfolio .main_rolling .slide4 { 
+        background-image:url(../img/slide3.jpg); }
+#Portfolio .main_rolling .slide .text {
+      position:absolute; top:50%; left:50%; 
+      transform:translate(-50%, -50%); 
+      color:#fff;  text-align:center; 
+    }
+#Portfolio .main_rolling .slide .text p:nth-child(1) { font-size:45px;
+       letter-spacing:0px; text-shadow:2px 2px 5px #555; 
+       padding-bottom:10px  }
+#Portfolio .main_rolling .slide .text p:nth-child(2) { font-size:20px;
+      letter-spacing:6px; margin-top:20px  }
+    /* .slide2,  .slide3 { display:none } */
+#Portfolio .main_rolling .slide.slick-active .text p:nth-child(1) {  animation:bounce  1s  both  0.5s  }
+#Portfolio .main_rolling .slide.slick-active .text p:nth-child(2) {  animation:bounceInUp  1s  both  1s }
+    
+    /*슬라이드 넘기기 버튼*/
+#Portfolio .main_rolling { position:relative }
+#Portfolio .main_rolling .marrow  { position:absolute; top:50%; transform:translateY(-50%);
+        background:none; border:none; font-size:80px; color: #979797; outline: none; }
+#Portfolio .main_rolling .prevArrow  { left:20px; z-index:99}
+#Portfolio .main_rolling .nextArrow { right:20px }
+
+    /*슬라이드 번호*/
+#Portfolio .main_rolling .slick-dots { position:absolute; bottom:20px; width:60%; text-align:right  }
+#Portfolio .main_rolling .slick-dots li {  display:inline-block; width:114px; height:2px;
+         background: #949597; margin:0 5px; position:relative}
+#Portfolio .main_rolling .slick-dots li button { width:0px; height:2px; background:#ffcd2e; 
+  border:none;  text-indent:-9999px; overflow:hidden; border-radius:1px;
+  position:absolute; top:0; left:0; 
+  }
+#Portfolio .main_rolling .slick-dots li.slick-active button {  animation:lineani  4.5s  both ; outline: none;} 
+@keyframes  lineani {
+      0% { width:0px }
+      100% { width:100%; }
+}
+
+#Portfolio .main_rolling .plpa { position:absolute; bottom:18px; background:none; border:none; 
+  font-size:15px; color:#fff; right:0; width:40%; 
+  text-align:left; padding-left:10px; outline: none;}
+
+
+#Portfolio #tabMenu>h1{
+    font-family: 'Aleo', serif;
+    font-size: 40px;
+    margin: 20px 0;
+    position: relative;
+}
+#Portfolio #tabMenu>h1::after{
+    content: '';
+    width: 160px;
+    height: 10px;
+    background: #ffcd2e;
+    position: absolute;
+    bottom: -10px;
+    left: 0;   
+}
+/* 탭메뉴 */
+
+
+#Portfolio #tabMenu ul.tabs {
+ margin-top: 30px;
+ display: flex;
+ font-size: 30px;
+ font-family: 'Aleo', serif;
+ width: 100%;
+}
+#Portfolio ul.tabs li {
+  justify-content: space-between;
+  border-top:2px solid #000 ;
+  border-left:2px solid #000 ;
+  border-right:2px solid #000 ;
+  background: #ddd;
+  padding: 20px;
+  margin-right: 5px;
+}
+#Portfolio ul.tabs li.active {
+    color: #000;
+    background: #fff;
+}
+#Portfolio .tab_container {
+  margin-top:-1.5px;
+   background: #fff;
+   border: 2px solid #000;
+}
+#Portfolio .tab_content {
+    display: none;
+}
+#Portfolio .tab_container .wab {
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+#Portfolio .tab_container .wab>li {
+    padding: 10px;    
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 3px;
+    background: #fff;
+    transition: all 0.5s;
+}
+#Portfolio .tab_container .wab>li:hover{
+    transform: scale(1.2);
+}
+#Portfolio .tab_container .wab>li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Portfolio .tab_container .wab>li a img {
+    width:200px;
+}
+
+#Portfolio .tab_container .wab>li a .text {
+    margin-left: 20px;
+    text-align: center
+}
+#Portfolio .tab_container .wab>li a .text p:nth-child(1){
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#Portfolio .tab_container .wab>li a .text p:nth-child(2){
+ font-size: 20px;
+ font-weight: bold
+}
+
+
+
+
+ 
+
+
+
+/* #Skills {height: 1000px; border: 1px solid rosybrown;  background-color: #ffcd2e;}
+#Aboutme {height: 1000px; border: 1px solid #ffcd2e;  background-color: aquamarine;} */
