@@ -130,6 +130,7 @@ header .headerBox {
   border-top:2px solid #000 ;
   border-left:2px solid #000 ;
   border-right:2px solid #000 ;
+  
   background: #ddd;
   padding: 20px;
   margin-right: 5px;
@@ -139,7 +140,7 @@ header .headerBox {
     background: #fff;
 }
 #Portfolio .tab_container {
-  margin-top:-1.5px;
+  margin-top:-2.1px;
    background: #fff;
    border: 2px solid #000;
 }
@@ -161,7 +162,7 @@ header .headerBox {
     border-radius: 5px;
     margin: 3px;
     background: #fff;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 #Portfolio .tab_container .wab>li:hover{
     transform: scale(1.2);
