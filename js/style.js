@@ -87,5 +87,59 @@ $(function () {
     });
 });
 
+var href, src, alt, lieq;
+$('#tab2 > .psNai > li').on('click', function(e){
+  e.preventDefault();//기본 이벤틀 막아줌
+  lieq = $(this).parent().index()
+  $('.gellaryPopup').addClass('on')
+  href = $(this).attr('href')
+  src = $(this).find('img').attr('src')
+  alt = $(this).find('img').attr('alt')
+  //console.log(alt)
+  $('.popuplist > div > a').attr('href',href)
+  $('.popuplist > div > a > img').attr({
+      'src':src,
+      'alt':alt
+  })
+
+})
+
+$('.gellaryPopup .close, .gellaryPopup').on('click',function(){
+    $('.gellaryPopup').removeClass('on')
+})
+$('.popuplist').on('click',function(e){
+    e.stopPropagation(); //부모한테 이벤트 전파를 막음
+}) 
+function changeList(ind){
+  href = $('.psNai > li').eq(ind).find('a').attr('href')
+  src = $('.psNai > li').eq(ind).find('img').attr('src')
+  alt = $('.psNai > li').eq(ind).find('img').attr('alt')
+  $('.popuplist > div > a').attr('href',href)
+  $('.popuplist > div > a > img').attr({
+      'src':src,
+      'alt':alt
+}).css({
+    opacity:'0.5'
+}).stop().animate({
+    opacity:'1'
+}, 500)
+}
+
+$('.popuplist .prev').on('click',function(){
+  --lieq;
+  if (lieq < 0){
+      lieq = 6;
+  }
+  changeList(lieq)
+})
+
+$('.popuplist .next').on('click',function(){
+  ++lieq;
+  if (lieq > 6){
+      lieq = 0;
+  }
+  changeList(lieq)
+  })
+
 
 })(jQuery)
