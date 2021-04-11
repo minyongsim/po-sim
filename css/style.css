@@ -360,6 +360,7 @@ border: 1px solid #000;
 #Aboutme .infoList li {
     border: 1px solid #000; margin-bottom: 10px; border-radius: 5px;
     transition: all 0.5s;
+    
 }
 #Aboutme .infoList li>p{
      font-size: 30px; padding: 10px;
@@ -368,6 +369,7 @@ border: 1px solid #000;
 #Aboutme .infoList li .Moreinformation {
     padding: 10px;
     display: none;
+    transition: all 0.5s;
 }
 #Aboutme .infoList li .Moreinformation p{
     font-size: 25px;
