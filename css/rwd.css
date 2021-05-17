@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* 
+@media screen and (max-height: 1440px) { 
+    #page-1 .home .logo > .textBox{
+        height:700px;
+        margin:15vh 0;
+        padding: 10px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 70px;
+        color:#FC443F;
+        border: 1px solid #FC443F;
+    }
+    #page-1 .home .main_rolling {
+        margin: 15vh 0 ; 
+        width: 55%;
+    }
+    #page-1 .home .main_rolling .slide { 
+        height:700px;
+        position:relative
+    }
+
+        
+}  */
+
+/* @media screen and (max-height: 600px) { 
+  
+    #page-1 .home .main_rolling {
+        margin: 17vh 0; 
+        width: 60%;
+        height:400px;
+        border: 2px solid #000;
+    }
+    #page-1 .home .main_rolling .slide { 
+        height:396px;
+        position:relative
+    }
+
+
+} */
