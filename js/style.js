@@ -67,34 +67,6 @@
     $(window).scroll(Page__updateIndicatorActive);
 
 
-var sct = 0;
-var winHeight;
-$(window).scroll(function () {
-    sct = $(this).scrollTop();
-    winHeight = $(this).height()
-
-    // 스크롤탑값이 100이상이 되면 맨위로 버튼이 보이고 100미만이면 숨기기
-    // if (sct >= 100) {
-    //     $(".gotop").addClass("on").stop().animate({
-    //         opacity: 1
-    //     }, 500)
-    // } else {
-    //     $(".gotop").removeClass("on").stop().animate({
-    //         opacity: 0
-    //     }, 500)
-    // }
-
-    // sct 값이 
- 
-});
-
-
-// $(window).scroll(function () {
-//     var sct = $(this).scrollTop()
-//     var skHight = $('.').offset().top - $(this).height() / 2
-    
-// })
-
 // 슬릭 슬라이더
 $(".home .visualRoll").slick({
     autoplay: true, // 자동재생
