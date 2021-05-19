@@ -1,5 +1,5 @@
 $(function ($) {
-    var $menu = $('#header .menuBox li'),
+    var $menu = $('#header .headerBox .menuBox li'),
         $pages = $('.pages > .page');
 
     $menu.on('click',function(e){
@@ -11,7 +11,12 @@ $(function ($) {
      
     });
 
+    var scollSize = $(document).height() - $('#header').height() - $(window).height();
+   
     $(window).scroll(function(){
+        var sct = $(this).scrollTop();
+        var wid = (sct / scollSize) * 100 + '%';
+
         $pages.each(function(){
             if($(this).offset().top <= $(window).scrollTop()){
                 var idx = $(this).index();
@@ -19,9 +24,35 @@ $(function ($) {
                 $menu.eq(idx).addClass('active')
             }
         });
+
+        $('.slideBar').css({
+                opacity: 1,
+                width: wid
+            });
+
     });
-    
-    
+
+    $('.pages > .page').on("mousewheel",function(e, wh){    
+       
+		//마우스 휠을 올렸을때	
+          if (wh > 0) {  
+			//변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
+             var prev = $(this).prev().offset().top;
+			 $("html,body").stop().animate({
+                 scrollTop:prev
+                },500,"linear");
+		//마우스 휠을 내렸을때	 
+          }else if (wh < 0) {  
+			//변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+             var next = $(this).next().offset().top;
+			 $("html,body").stop().animate({
+                 scrollTop:next
+                },500,"linear");                                         
+          }
+        
+     });
+
+ 
 
     $(window).scroll(function () {
         var sct = 0
