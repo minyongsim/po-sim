@@ -168,7 +168,7 @@ body {
     animation: logo 3s both;
 }
 
- .aniTop {
+.home .logo .aniTop01 {
     height: 50px;
     background: #FC443F;
     border-radius: 0px 50px 50px 0px ;
@@ -176,12 +176,22 @@ body {
     left: 0;
     top: 150px;
     opacity: 0;
-    animation: aniToBo 3s both;
-    text-align: right;
+    animation: aniToBo01 3s both;
+}
+.home .logo .aniTop02 {
+    width: 50px;
+    background: #FC443F;
+    border-radius: 0px 0px 50px 50px ;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    opacity: 0;
+    animation: aniToBo02 3s both 0.3s;
 }
 
 
-@keyframes aniToBo {
+
+@keyframes aniToBo01 {
     0%{
         width: 0;
     }
@@ -190,7 +200,17 @@ body {
         width: 700px;
     }
 }
-.aniBottom {
+@keyframes aniToBo02 {
+    0%{
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+        height: 500px;
+    }
+}
+
+.home .logo .aniBottom01 {
     height: 50px;
     background: #FEBE4B;
     border-radius: 50px 0px 0px 50px ;
@@ -198,7 +218,17 @@ body {
     right: 0;
     bottom: 300px;
     opacity: 0;
-    animation: aniToBo 3s both;
+    animation: aniToBo01 3s both;
+}
+.home .logo .aniBottom02 {
+    width: 50px;
+    background: #FEBE4B;
+    border-radius: 50px 50px 0px 0px ;
+    position: absolute;
+    right: 10%;
+    bottom: 0px;
+    opacity: 0;
+    animation: aniToBo02 3s both 0.3s;
 }
 
 
@@ -516,10 +546,6 @@ body {
 #page-2 .PortfolioBox.on .listBox li:nth-child(18) {
     animation: fadeInUp 2s both 0.3s;
 }
-
-
-
-
 
 /* 갤러리 팝업 */
 .PortfolioBox .gellaryPopup {
@@ -1148,14 +1174,20 @@ body {
 
 .gotop {
     display: none;
+    background:#fff;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #FC443F;
     position: fixed;
-    right: 10px;
+    right: 5px;
     bottom: 10px;
     z-index: 99999999;
     opacity: 0;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: #FC443F;
+    box-shadow: 1px 3px 10px 0px #999;
+
 }
 
 .gotop.on {
@@ -1163,7 +1195,8 @@ body {
 }
 
 .gotop i {
-    width: 100px;
+    width: 70px;
+    font-size: 50px;
     cursor: pointer;
 }
 
