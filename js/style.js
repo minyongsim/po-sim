@@ -1,4 +1,14 @@
 $(function ($) {
+    $(window).load(function () {
+        $('.introAni').delay(500).fadeOut(800)
+    })
+
+    window.onload = function() {
+        setTimeout (function () {
+         scrollTo(0,0);
+        }, 100); 
+       }
+    // 메뉴 스크롤 이벤트
     var $menu = $('#header .headerBox .menuBox li'),
         $pages = $('.pages > .page');
 
@@ -11,12 +21,11 @@ $(function ($) {
      
     });
 
+    // 스크롤 이벤트
+    var sct =0
     var scollSize = $(document).height() - $('#header').height() - $(window).height();
-   
     $(window).scroll(function(){
-        var sct = $(this).scrollTop();
-        var wid = (sct / scollSize) * 100 + '%';
-
+        // 스크롤 시 메뉴에 active
         $pages.each(function(){
             if($(this).offset().top <= $(window).scrollTop()){
                 var idx = $(this).index();
@@ -25,38 +34,27 @@ $(function ($) {
             }
         });
 
+        //스크롤 슬라이드 바
+        var sct = $(this).scrollTop();
+        var wid = (sct / scollSize) * 100 + '%';
         $('.slideBar').css({
                 opacity: 1,
                 width: wid
-            });
+        });
 
-    });
-
-    $('.pages > .page').on("mousewheel",function(e, wh){    
-       
-		//마우스 휠을 올렸을때	
-          if (wh > 0) {  
-			//변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
-             var prev = $(this).prev().offset().top;
-			 $("html,body").stop().animate({
-                 scrollTop:prev
-                },500,"linear");
-		//마우스 휠을 내렸을때	 
-          }else if (wh < 0) {  
-			//변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
-             var next = $(this).next().offset().top;
-			 $("html,body").stop().animate({
-                 scrollTop:next
-                },500,"linear");                                         
-          }
+        //스크롤 탑 버튼
+        if(sct>=100){
+            $(".gotop").addClass("on").stop().animate({
+                opacity: 1
+            },500)
+        }else{
+            $(".gotop").removeClass("on").stop().animate({
+                opacity:0
+            },500)
+        }
         
-     });
-
- 
-
-    $(window).scroll(function () {
-        var sct = 0
-        sct = $(this).scrollTop();
+        // 스킬스 그래프 이벤트
+        var sct = $(this).scrollTop();
         var winHeight = sct - $(this).height()/2
         skils(80, '.photoshop');
         skils(70, '.illustrator');
@@ -82,40 +80,69 @@ $(function ($) {
                 }
             }, 45)
         }
+    
+        // 스크롤 애니메이션
 
+        var scrollEvent = $(this).scrollTop()
+        var page1Event = $('.page-1').offset().top - $(this).height()/2
+        if (scrollEvent >= page1Event && scrollEvent <= $('.page-1').offset().top  ) {
+            $('.home .logo').show()
+        } else {
+            $('.home .logo').hide()
+        };
+        var page2Event = $('.page-2').offset().top - $(this).height()/2
+        if (scrollEvent >= page2Event && scrollEvent <= $('.page-2').offset().top  ) {
+            $('#page-2 .PortfolioBox').addClass('on')
+        } else {
+            $('#page-2 .PortfolioBox').removeClass('on')
+        };
+        var page3Event = $('.page-3').offset().top - $(this).height() / 2
+        if (scrollEvent >= page3Event  && scrollEvent <=  $('.page-3').offset().top ) {
+            $('.skillcontainer02').addClass('on')
+        } else {  
+            $('.skillcontainer02').removeClass('on')
+        };
+        var page4Event = $('.page-4').offset().top - $(this).height() / 2
+        if (scrollEvent >= page4Event && scrollEvent <= $('.page-4').offset().top) {
+            $('.aboutKeyword,.myInfo').addClass('on')
+        } else {
+            $('.aboutKeyword,.myInfo').removeClass('on')
+        };
+        var page5Event = $('.page-5').offset().top - $(this).height() / 2
+        if (scrollEvent >= page5Event && scrollEvent <= $('.page-5').offset().top ) {
+            $('.contactInner').addClass('on')
+        } else {
+            $('.contactInner').removeClass('on')
+        };
 
     });
 
-
-    // 슬릭 슬라이더
-    $(".home .visualRoll").slick({
-        autoplay: true, // 자동재생
-        autoplaySpeed: 4000, // 간격시간
-        dots: true, // 동그라미버튼
-        speed: 1000, // 바뀌는시간(생략가능)
-        slidesToShow: 1, // 보여질슬라이드수(생략가능)
-        slidesToScroll: 1, // 이동슬라이드수(생략가능)
-        pauseOnHover: true, // 마우스오버시 멈춤여부(생략가능)
-        pauseOnDotsHover: true, // 동그라미번호버튼에 호버시 멈춤여부(생략가능)
-        pauseOnFocus: false, // 동그라미번호버튼 클릭시 자동실행 멈춤여부
-        cssEase: 'linear', // 속도함수(생략가능)
-        draggable: true, // 마우스드래그시 슬라이드 교체가능여부(생략가능)
-        fade: false, // 슬라이드가 수평으로 이동하지 않고, 제자리에서 사라지고 나타남(생략가능)
-        arrows: true, // 좌우화살표 사용여부(생략가능)
-        prevArrow: '<button class="prevArrow  marrow"><i class="fas fa-angle-left"></i></button>',
-        nextArrow: '<button class="nextArrow  marrow"><i class="fas fa-arrow-right"></i></i></button>',
+    $(".gotop").on("click",function(){
+        $("html,body").stop().animate({
+            scrollTop:"0"
+        },800,"linear")
     })
 
-    // 슬릭 슬라이더 플레이 버튼
-    $(".main_rolling .plpa").on("click", function () {
-        if ($(this).find("i").hasClass("fa-pause")) {
-            $(".visualRoll").slick("slickPause")
-            $(this).find("i").removeClass("fa-pause").addClass("fa-play")
-        } else {
-            $(".visualRoll").slick("slickPlay")
-            $(this).find("i").removeClass("fa-play").addClass("fa-pause")
-        }
-    })
+    $('.pages > .page').on("mousewheel",function(e, wh){    
+       
+		//마우스 휠을 올렸을때	
+          if (wh > 0) {  
+			//변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
+             var prev = $(this).prev().offset().top;
+			 $("html,body").stop().animate({
+                 scrollTop:prev
+                },500,"linear");
+		//마우스 휠을 내렸을때	 
+          }else if (wh < 0) {  
+			//변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+             var next = $(this).next().offset().top;
+			 $("html,body").stop().animate({
+                 scrollTop:next
+                },500,"linear");                                         
+          }
+        
+     });
+
 
     $('.all').show();
     $('.keyword > li > button').on('click', function () {
