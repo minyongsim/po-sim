@@ -209,6 +209,15 @@ body {
         height: 500px;
     }
 }
+@keyframes scrollAni {
+    0% {
+      opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        bottom: 350px;
+    }
+}
 
 .home .logo .aniBottom01 {
     height: 50px;
@@ -230,6 +239,21 @@ body {
     opacity: 0;
     animation: aniToBo02 3s both 0.3s;
 }
+.home .scrollDown{
+   font-size: 15px; 
+   position: absolute;
+   bottom:360px;
+   left: 50%;
+ transform: translateX(-50%);
+   color: #999;
+   text-align: center;
+   animation:scrollAni 2s infinite;
+}
+.home .scrollDown img{
+    width: 7%;
+}
+
+
 
 
 
