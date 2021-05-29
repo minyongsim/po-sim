@@ -1,13 +1,29 @@
 $(function ($) {
-    $(window).load(function () {
-        $('.introAni').delay(500).fadeOut(800)
-    })
+
+    var aniBox = 0
+    var introAni = setInterval(timer, 15)
+    function timer() {
+        aniBox++
+        $('.introAni .introAniInner .aniBox').css({
+            width: aniBox+'%'
+        })
+        // 100%까지 가면 사라지기
+        if (aniBox === 101) {
+            clearInterval(introAni)
+            $('.introAni').fadeOut(500)
+            return false
+        }
+        // 퍼센트 숫자세기
+        $('.introAni .percent').text(aniBox+'%')
+    }
+
 
     window.onload = function() {
         setTimeout (function () {
          scrollTo(0,0);
         }, 100); 
        }
+
     // 메뉴 스크롤 이벤트
     var $menu = $('#header .headerBox .menuBox li'),
         $pages = $('.pages > .page');
