@@ -165,7 +165,7 @@ body {
     left: 50%;
     transform: translate(-50%, -40%);
     opacity: 0;
-    animation: logo 3s both;
+    animation: logo 3s both 0.3s;
 }
 
 .home .logo .aniTop01 {
@@ -1249,6 +1249,7 @@ body {
     overflow: hidden;
     text-align: center;
     color: #FEBE4B;
+    font-weight: 900;
     
 }
 
