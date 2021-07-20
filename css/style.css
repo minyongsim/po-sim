@@ -1198,10 +1198,8 @@ body {
 
 .gotop {
     display: none;
-    background:#fff;
     padding: 10px 0;
     border-radius: 10px;
-    border: 2px solid #FC443F;
     position: fixed;
     right: 5px;
     bottom: 10px;
@@ -1210,7 +1208,6 @@ body {
     text-align: center;
     font-size: 20px;
     color: #FC443F;
-    box-shadow: 1px 3px 10px 0px #999;
 
 }
 
