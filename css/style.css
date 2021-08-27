@@ -193,38 +193,38 @@ body {
 }
 .home_graphic>img:nth-of-type(1) {
     opacity: 0;
-    animation: homeGraphic7 1.5s both 4.7s;
+    animation: homeGraphic7 1.5s both 6.4s;
      /* 홈그래픽7 */
 }
 .home_graphic>img:nth-of-type(2) {
     opacity: 0;
-    animation: homeGraphic6 1.5s both 4.4s;
+    animation: homeGraphic6 1.5s both 6.2s;
      /* 홈그래픽6 */
 }
 .home_graphic>img:nth-of-type(3) {
     opacity: 0;
-    animation: homeGraphic5 1.5s both 4.1s;
+    animation: homeGraphic5 1.5s both 6s;
      /* 홈그래픽5 */
 }
 .home_graphic>img:nth-of-type(4) {
     opacity: 0;
-    animation: homeGraphic4 1.5s both 3.8s;
+    animation: homeGraphic4 1.5s both 5.8s;
      /* 홈그래픽4 */
 }
 .home_graphic>img:nth-of-type(5) {
     opacity: 0;
-    animation: homeGraphic3 1.5s both 3.5s;
+    animation: homeGraphic3 1.5s both 5.6s;
      /* 홈그래픽3 */
 }
 .home_graphic>img:nth-of-type(6) {
     opacity: 0;
-    animation: homeGraphic2 1.5s both 3.3s
+    animation: homeGraphic2 1.5s both 5.2s
     /* 홈그래픽2 */
 }
 .home_graphic>img:nth-of-type(7) {
     opacity: 0;
     /* box-shadow:0 5px 10px rgba(255, 255, 255, 0.5); */
-    animation: homeGraphic1 1.5s both 2.9s;
+    animation: homeGraphic1 1.5s both 5s;
     /* 홈그래픽2 */
 }
 @keyframes homeGraphic1{
@@ -300,27 +300,27 @@ body {
 }
 .home_glitch>img:nth-of-type(1){
     opacity: 0;
-    animation:  homeGlitch1 3s both ;
+    animation:  homeGlitch1 3s both 2s;
     top: 44%;
 }
 .home_glitch>img:nth-of-type(2){
     opacity: 0;
-    animation: homeGlitch2 3s both ;
+    animation: homeGlitch2 3s both 2s;
     top: 47%;
 }
 .home_glitch>img:nth-of-type(3){
     opacity: 0;
-    animation: homeGlitch3 3s both ;
+    animation: homeGlitch3 3s both 2s;
     top:50%;
 }
 .home_glitch>img:nth-of-type(4){
     opacity: 0;
-    animation: homeGlitch4 3s both ;
+    animation: homeGlitch4 3s both 2s;
     top: 53%;
 }
 .home_glitch>img:nth-of-type(5){
     opacity: 0;
-    animation: homeGlitch5 3s both;
+    animation: homeGlitch5 3s both 2s;
     top: 56%;
 }
 @keyframes homeGlitch1{
@@ -1068,30 +1068,52 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #FEBE4B;
+    background: #0D0D0D;
     z-index: 999999999999;
   
 }
 
 .introAni .introAniInner{
-    width: 600px;
-    height: 150px;
+    width: 500px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 40px;
+    border: 5px solid #FFF;
+    overflow: hidden;
+    text-align: center;
+    color: #0D0D0D;
+}
+.introAni>h2 {
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%,-50%);
-    text-align: center;
-    font-size: 50px;
-    border: 5px solid #999;
-    border-radius: 50px;
-    overflow: hidden;
-    text-align: center;
-    color: #FEBE4B;
-    font-weight: 900;
-    
+    color: #fff;
+    font-size: 40px;
+}
+.introAni>h2>span:nth-of-type(1){
+    opacity: 0;
+    animation: ani 1s infinite;
+}
+.introAni>h2>span:nth-of-type(2){
+    opacity: 0;
+    animation: ani 1.5s infinite;
 }
 
 .introAni .introAniInner .aniBox{
     width: 0;
-    background: #FC443F;
+    height: 80px;
+    background: #fff;
+}
+@keyframes ani {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
