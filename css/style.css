@@ -193,38 +193,38 @@ body {
 }
 .home_graphic>img:nth-of-type(1) {
     opacity: 0;
-    animation: homeGraphic7 1.5s both 6.4s;
+    animation: homeGraphic7 1.5s both 4.8s;
      /* 홈그래픽7 */
 }
 .home_graphic>img:nth-of-type(2) {
     opacity: 0;
-    animation: homeGraphic6 1.5s both 6.2s;
+    animation: homeGraphic6 1.5s both 4.5s;
      /* 홈그래픽6 */
 }
 .home_graphic>img:nth-of-type(3) {
     opacity: 0;
-    animation: homeGraphic5 1.5s both 6s;
+    animation: homeGraphic5 1.5s both 4.2s;
      /* 홈그래픽5 */
 }
 .home_graphic>img:nth-of-type(4) {
     opacity: 0;
-    animation: homeGraphic4 1.5s both 5.8s;
+    animation: homeGraphic4 1.5s both 3.9s;
      /* 홈그래픽4 */
 }
 .home_graphic>img:nth-of-type(5) {
     opacity: 0;
-    animation: homeGraphic3 1.5s both 5.6s;
+    animation: homeGraphic3 1.5s both 3.6s;
      /* 홈그래픽3 */
 }
 .home_graphic>img:nth-of-type(6) {
     opacity: 0;
-    animation: homeGraphic2 1.5s both 5.2s
+    animation: homeGraphic2 1.5s both 3.3s
     /* 홈그래픽2 */
 }
 .home_graphic>img:nth-of-type(7) {
     opacity: 0;
     /* box-shadow:0 5px 10px rgba(255, 255, 255, 0.5); */
-    animation: homeGraphic1 1.5s both 5s;
+    animation: homeGraphic1 1.5s both 3s;
     /* 홈그래픽2 */
 }
 @keyframes homeGraphic1{
@@ -300,27 +300,27 @@ body {
 }
 .home_glitch>img:nth-of-type(1){
     opacity: 0;
-    animation:  homeGlitch1 3s both 2s;
+    animation:  homeGlitch1 3s both 0.3s;
     top: 44%;
 }
 .home_glitch>img:nth-of-type(2){
     opacity: 0;
-    animation: homeGlitch2 3s both 2s;
+    animation: homeGlitch2 3s both 0.3s;
     top: 47%;
 }
 .home_glitch>img:nth-of-type(3){
     opacity: 0;
-    animation: homeGlitch3 3s both 2s;
+    animation: homeGlitch3 3s both 0.3s;
     top:50%;
 }
 .home_glitch>img:nth-of-type(4){
     opacity: 0;
-    animation: homeGlitch4 3s both 2s;
+    animation: homeGlitch4 3s both 0.3s;
     top: 53%;
 }
 .home_glitch>img:nth-of-type(5){
     opacity: 0;
-    animation: homeGlitch5 3s both 2s;
+    animation: homeGlitch5 3s both 0.3s;
     top: 56%;
 }
 @keyframes homeGlitch1{
@@ -928,7 +928,7 @@ body {
     color: #fff;
     font-size: 17px;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: all 0.5s;
     margin-bottom: 15px;
 }
 
@@ -937,10 +937,12 @@ body {
     font-size: 23px;
     background: #fff;
     font-weight: bold;
+    transition: all 0.5s;
 }
 
 .skillcontainer02>.skillTree02:hover>p{
-   background:#FC443F ;
+    color:#0D0D0D;
+    background: #fff;
 }
 
 .skillcontainer02 .skillTree02:nth-child(1),
