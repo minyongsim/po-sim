@@ -1,305 +1,43 @@
 @charset "utf-8";
 
-/* @media screen and (max-width:1470px) {
-    .home .logo
-    {
-        text-align: center;
+
+
+@media screen and (max-width:1900px) {
+    #page-2 .PortfolioBox{
+        padding-top: 35px;
     }
-
-    .home .logo .logo1 {
-     
-        animation: logov1 1.5s both;
+    .skillsBox {
+        padding-top: 35px;
     }
-
-    @keyframes logov1 {
-        0% {
-            opacity: 0;
-        }
-
-        20% {
-            transform: scale(0.9);
-        }
-
-        60% {
-            transform: scale(1);
-        }
-
-        80% {
-            transform: scale(1.1);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-
+    .page-4 {
+        padding-top:35px ;
     }
-
-    .home .logo .logo2 {
-      
-        animation:logov1 1.5s both;
-    }
-
-    @keyframes logov2 {
-        0% {
-            opacity: 0;
-            right: -1000px;
-        }
-
-        100% {
-            opacity: 1;
-            right: 26.65%;
-        }
-    }
-
-
-} */
-
-
-@media screen and (max-width:1300px) {
-
-    .headerBox {
-        padding: 10px 20px;
-        margin-top: 10px;
-        box-shadow: 1px 3px 10px 0px #999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        background: white;
-        border-radius: 50px;
-    }
-
-    .headerBox>h2 {
-        font-size: 25px;
-        font-weight: 800;
-    }
-
-    .headerBox>h2>span {
-        background: linear-gradient(50deg, #Ff0061, #Fec194);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent
-    }
-
-    .menuBox {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 60%;
-    }
-
-    .menuBox>li {
-        margin-right: 10px;
-        font-weight: 900;
-        font-size: 17px;
-        letter-spacing: 3px;
-    }
-
-    .menuBox>li.active a {
-        color: #fff;
-        font-weight: 900;
-        padding: 5px 10px;
-        background: linear-gradient(135deg, #Ff0061, #Fec194);
-        border-radius: 50px;
-    }
-
-    #page-2 .PortfolioBox .listBox li p {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10px;
-        font-size: 11px;
-    }
-
-    #page-2 .PortfolioBox .listBox li:nth-child(1) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(2) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(3) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(4) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(5) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(6) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(7) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(8) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(9) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(10) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(11) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(12) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(13) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(14) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(15) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(16) img {
-        width: 80%;
-    }
-
-
-    #page-2 .PortfolioBox .listBox li:nth-child(17),
-    #page-2 .PortfolioBox .listBox li:nth-child(18) {
-        width: 300px;
-    }
-
-    #page-2 .PortfolioBox .listBox li:nth-child(17) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(18) img {
-        width: 55%;
-    }
-
-    .skillcontainer p {
-        font-size: 15px;
-        font-weight: 800;
-    }
-
-    .skillcontainer>.skillTree {
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px 10px;
-        /* border: 1px solid red; */
-        margin-bottom: 10px;
-        cursor: pointer;
-        /* -webkit-transition:all 0.2s;
-        transition:all 0.2s; */
-        border: 1px solid #ddd;
-
-    }
-
-    .skillcontainer .score {
-        width: 80%;
-        height: 25px;
-        border: 3px solid #ddd;
-        position: relative;
-        border-radius: 50px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .skillcontainer .myscore {
-        height: 25px;
-        width: 0%;
-        padding-right: 10px;
-        text-align: right;
-        font-size: 15px;
-        font-weight: 800;
-        opacity: 0;
-        color: #fff;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .skillcontainer02>.skillTree02 p {
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    .aboutKeyword>ul>li {
-        text-align: center;
-        width: 30%;
-        font-weight: 800;
-        font-size: 20px;
-        padding: 10px;
-        margin-bottom: 20px;
-        margin-right: 15px;
-        border: 2px solid #FC443F;
-        border-radius: 50px;
-        color: #FC443F;
-        transition: all 0.3s;
-    }
-
-    .footer {
-        margin-top: 400px;
-        background: #ddd;
-    }
-
-
-
 }
-
-@media screen and (max-width:1024px) {
-    #page-1 .dcoBox {
-        background: #FEBE4B;
-        width: 450px;
-        height: 1000px;
-
-    }
-
-    .menuBox {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 70%;
-    }
-
-    .menuBox>li {
-        margin-right: 10px;
-        font-weight: 900;
-        font-size: 15px;
-        letter-spacing: 3px;
-    }
-
-
-    .menuBox>li.active a {
-        color: #fff;
-        font-weight: 900;
-        padding: 5px 15px;
-        background: linear-gradient(135deg, #Ff0061, #Fec194);
-        border-radius: 50px;
-    }
-
-    #page-2 .PortfolioBox .listBox li:nth-child(1) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(2) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(3) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(4) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(5) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(6) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(7) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(8) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(9) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(10) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(11) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(12) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(13) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(14) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(15) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(16) img {
-        width: 100%;
-    }
-
-    #page-2 .PortfolioBox .listBox li:nth-child(17),
-    #page-2 .PortfolioBox .listBox li:nth-child(18) {
-        width: 200px;
-
-    }
-
-    #page-2 .PortfolioBox .listBox li:nth-child(17) img,
-    #page-2 .PortfolioBox .listBox li:nth-child(18) img {
-        width: 100%;
-    }
-
-    .skillcontainer p {
-        font-size: 15px;
-        font-weight: 800;
-    }
-
-    .aboutKeyword>ul>li {
-        text-align: center;
-        width: 30%;
-        font-weight: 800;
-        font-size: 13px;
-        padding: 10px;
-        margin-bottom: 20px;
-        margin-right: 15px;
-        border: 2px solid #FC443F;
-        border-radius: 50px;
-        color: #FC443F;
+@media screen and (max-width:1500px) {
+    
+    #header {
+        position: fixed;
+        right:0;
+        top: 40%;
+        transform: translateY(-40%);
+        z-index: 999999;
+        margin: 0 auto;
         transition: all 0.3s;
     }
-
-    .myInfo {
-        margin-top: 10px;
-        width: 50%;
-        padding: 50px 100px;
+   
+    .gotop {
+        display: none;
+        padding: 10px 0;
+        border-radius: 10px;
+        position: fixed;
+        right:1%;
+        bottom: 3%;
+        z-index: 99999999;
+        opacity: 0;
+        font-size: 20px;
+        font-weight:900 ;
+        text-align: center;
+    
     }
-
-
-
-
-
+    
 }

@@ -1,32 +1,33 @@
 $(function ($) {
 
-    var aniBox = 0
-    var introAni = setInterval(timer, 15)
-    function timer() {
-        aniBox++
-        $('.introAni .introAniInner .aniBox').css({
-            width: aniBox+'%'
-        })
-        // 100%까지 가면 사라지기
-        if (aniBox === 101) {
-            clearInterval(introAni)
-            $('.introAni').fadeOut(500)
-            return false
-        }
-        // 퍼센트 숫자세기
-        $('.introAni .percent').text(aniBox+'%')
-    }
+    // var aniBox = 0
+    // var introAni = setInterval(timer, 15)
+    // function timer() {
+    //     aniBox++
+    //     $('.introAni .introAniInner .aniBox').css({
+    //         width: aniBox+'%'
+    //     })
+    //     // 100%까지 가면 사라지기
+    //     if (aniBox === 101) {
+    //         clearInterval(introAni)
+    //         $('.introAni').fadeOut(500)
+    //         return false
+    //     }
+    //     // 퍼센트 숫자세기
+    //     $('.introAni .percent').text(aniBox+'%')
+    // }
 
 
-    window.onload = function() {
-        setTimeout (function () {
-         scrollTo(0,0);
-        }, 100); 
-       }
+    // window.onload = function() {
+    //     setTimeout (function () {
+    //      scrollTo(0,0);
+    //     }, 100); 
+    //    }
 
     // 메뉴 스크롤 이벤트
-    var $menu = $('#header .headerBox .menuBox li'),
+    var $menu = $('#header .headerBox .menuBox li , .home .home_menu > li'),
         $pages = $('.pages > .page');
+        
 
     $menu.on('click',function(e){
         e.preventDefault();
@@ -34,11 +35,10 @@ $(function ($) {
         var section =$pages.eq(idx)
         var sd = section.offset().top 
         $('html,body').stop().animate({scrollTop:sd},500);
-     
     });
 
     // 스크롤 이벤트
-    var sct =0
+  
     var scollSize = $(document).height() - $('#header').height() - $(window).height();
     $(window).scroll(function(){
         // 스크롤 시 메뉴에 active
@@ -49,6 +49,32 @@ $(function ($) {
                 $menu.eq(idx).addClass('active')
             }
         });
+
+        var header_sct =$(this).scrollTop();
+        var h_winHeight = $(this).height()/2
+		// if(header_sct >= h_winHeight){
+        //     $("#header").css({
+        //         // background:'rgba(0,0,0,0.5)',
+        //     });
+        //     $(".headerBox>.logo").css({
+        //         color:'#000'
+        //     });
+        //     $(".menuBox>li").css({
+        //         color:'#000'
+        //     });
+          
+		// } else {
+        //     $("#header").css({
+        //         // background:'rgba(0,0,0,1)'
+        //     });
+        //     $(".headerBox>.logo").css({
+        //         color:'#fff'
+        //     });
+        //     $(".menuBox>li").css({
+        //         color:'#fff'
+        //     });
+        
+        // }
 
         //스크롤 슬라이드 바
         var sct = $(this).scrollTop();
@@ -102,9 +128,9 @@ $(function ($) {
         var scrollEvent = $(this).scrollTop()
         var page1Event = $('.page-1').offset().top - $(this).height()/2
         if (scrollEvent >= page1Event && scrollEvent <= $('.page-1').offset().top  ) {
-            $('.home .logo').show()
+             $('.home_glitch,.home_graphic,.scrollDown').show()
         } else {
-            $('.home .logo').hide()
+            $('.home_glitch,.home_graphic,.scrollDown').hide()
         };
         var page2Event = $('.page-2').offset().top - $(this).height()/2
         if (scrollEvent >= page2Event && scrollEvent <= $('.page-2').offset().top  ) {
@@ -140,7 +166,7 @@ $(function ($) {
     })
 
     $('.pages > .page').on("mousewheel",function(e, wh){    
-       
+       e.preventDefault()
 		//마우스 휠을 올렸을때	
           if (wh > 0) {  
 			//변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
@@ -187,7 +213,6 @@ $(function ($) {
             'src': src,
             'alt': alt
         })
-        $('.popuplist > div > a > img').html('<p></p>')
 
     })
 
@@ -211,20 +236,19 @@ $(function ($) {
         }).stop().animate({
             opacity: '1'
         }, 500)
-        $('.popuplist > div > a > img').html('<p></p>')
     }
 
     $('.popuplist .prev').on('click', function () {
         --lieq;
         if (lieq < 0) {
-            lieq = 18;
+            lieq = 13;
         }
         changeList(lieq)
     })
 
     $('.popuplist .next').on('click', function () {
         ++lieq;
-        if (lieq > 18) {
+        if (lieq > 13) {
             lieq = 0;
         }
         changeList(lieq)
@@ -235,7 +259,8 @@ $(function ($) {
 
     $('.skillcontainer>.skillTree').hover(function () {
         $(this).css({
-            transform: 'scale(1.1)'
+            transform: 'scale(1.1)',
+            zIndex:'99999999'
         })
     }, function () {
         $(this).css({
