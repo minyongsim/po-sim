@@ -3,14 +3,27 @@
 
 
 @media screen and (max-width:1900px) {
+    
     #page-2 .PortfolioBox{
         padding-top: 35px;
     }
     .skillsBox {
         padding-top: 35px;
     }
-    .page-4 {
+    .aboutMe{
         padding-top:35px ;
+    }
+    .page-5 {
+        height:900px;
+        box-sizing: border-box;
+        background: url(../img/df.jpg);
+        background-repeat: repeat;
+        background-size:300px;
+    }
+    .contact{
+        height: 600px;
+        padding-top: 35px;
+        position: relative;
     }
 }
 @media screen and (max-width:1500px) {

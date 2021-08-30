@@ -1,28 +1,28 @@
 $(function ($) {
 
-    // var aniBox = 0
-    // var introAni = setInterval(timer,10)
-    // function timer() {
-    //     aniBox++
-    //     $('.introAni .introAniInner .aniBox').css({
-    //         width: aniBox+'%'
-    //     })
-    //     // 100%까지 가면 사라지기
-    //     if (aniBox === 101) {
-    //         clearInterval(introAni)
-    //         $('.introAni').fadeOut(100)
-    //         return false
-    //     }
-    //     // 퍼센트 숫자세기
-    //     $('.introAni .percent').text(aniBox+'%')
-    // }
+    var aniBox = 0
+    var introAni = setInterval(timer, 10)
+    function timer() {
+        aniBox++
+        $('.introAni .introAniInner .aniBox').css({
+            width: aniBox+'%'
+        })
+        // 100%까지 가면 사라지기
+        if (aniBox === 101) {
+            clearInterval(introAni)
+            $('.introAni').fadeOut(100)
+            return false
+        }
+        // 퍼센트 숫자세기
+        $('.introAni .percent').text(aniBox+'%')
+    }
 
 
-    // window.onload = function() {
-    //     setTimeout (function () {
-    //      scrollTo(0,0);
-    //     }, 100); 
-    //    }
+    window.onload = function() {
+        setTimeout (function () {
+         scrollTo(0,0);
+        }, 100); 
+       }
 
     // 메뉴 스크롤 이벤트
     var $menu = $('#header .headerBox .menuBox li , .home .home_menu > li'),
@@ -144,17 +144,103 @@ $(function ($) {
         } else {  
             $('.skillcontainer02').removeClass('on')
         };
+        var d1= 0 ,d2= 0, e1= 0 ,e2= 0,e3= 0 ,c1= 0 ,c2= 0,c3= 0,c4= 0 ,c5= 0;
+        timeCounter();
         var page4Event = $('.page-4').offset().top - $(this).height() / 2
         if (scrollEvent >= page4Event && scrollEvent <= $('.page-4').offset().top) {
-            $('.aboutKeyword,.myInfo').addClass('on')
+            $('.aboutBox .information').addClass('on')
+            $('.information02').addClass('on')
+           
         } else {
-            $('.aboutKeyword,.myInfo').removeClass('on')
+            $('.aboutBox .information').removeClass('on')
+            $('.information02').removeClass('on')
         };
+        var d1 = 0 ;
+        var d2 = 0 ;
+        var e0102 = 0 ;
+        var c0102 = 0 ; 
+        var c03 = 0 ;
+        var c04 = 0 ; 
+        var c05 = 0 ; 
+        timeCounter();
+        function timeCounter() {
+
+          id0 = setInterval(count0Fn,50);
+          function count0Fn() {
+            d1++;
+            if (d1 > 80) {
+              clearInterval(id0);
+            
+            } else {
+              $(".d1").text(d1+'%').addclass('on')
+            }
+          }
+
+          id1 = setInterval(count1Fn,50);
+          function count1Fn() {
+            d2++;
+            if (d2 > 70) {
+              clearInterval(id1);
+            } else {
+                $(".d2").text(d2+'%').addclass('on')
+            }
+          }
+
+          id3 = setInterval(count2Fn,50);
+          function count2Fn() {
+            e0102++;
+            if (e0102 > 70) {
+              clearInterval(id3);
+            } else {
+                $(".e1,.e2").text(e0102+'%').addclass('on')
+            }
+          }
+
+          co1 = setInterval(count4Fn,50);
+          function count4Fn() {
+            c0102++;
+            if (c0102 > 75) {
+              clearInterval(co1);
+            } else {
+                $(".c1,.c2").text(c0102+'%').addclass('on')
+            }
+          }
+
+          co2 = setInterval(count5Fn,50);
+          function count5Fn() {
+            c03++;
+            if (c03 > 60) {
+              clearInterval(co2);
+            } else {
+                $(".c3").text(c03+'%').addclass('on')
+            }
+          }
+          co3 = setInterval(count6Fn,100);
+          function count6Fn() {
+            c04++;
+            if (c04 > 65) {
+              clearInterval(co2);
+            } else {
+                $(".c4").text(c04+'%').addclass('on')
+            }
+          }
+          co4 = setInterval(count7Fn,70);
+          function count7Fn() {
+            c05++;
+            if (c05 > 50) {
+              clearInterval(co4);
+            } else {
+                $(".c5").text(c05+'%').addclass('on')
+            }
+          }
+        
+        };
+        
         var page5Event = $('.page-5').offset().top - $(this).height() / 2
         if (scrollEvent >= page5Event && scrollEvent <= $('.page-5').offset().top ) {
-            $('.contactInner').addClass('on')
+            $('.contactBox').addClass('on')
         } else {
-            $('.contactInner').removeClass('on')
+            $('.contactBox').removeClass('on')
         };
 
     });
@@ -267,5 +353,8 @@ $(function ($) {
             transform: 'scale(1)'
         })
     }, 500)
+
+
+  
 
 },(jQuery))

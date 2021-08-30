@@ -57,7 +57,7 @@ body {
     background-size:300px;
 }
 .page-5 {
-    height: 1000px;
+    height:1000px;
     box-sizing: border-box;
     background: url(../img/df.jpg);
     background-repeat: repeat;
@@ -462,7 +462,6 @@ body {
     text-align: center;
     font-size: 30px;
     color: #fff;
-    border-radius: 3px 3px 0px 0px;
 }
 #page-2 .PortfolioBox .keyword {
     text-align: center;
@@ -968,92 +967,237 @@ body {
 
 
 /* page-4 About Me*/
-.page-4 {
+.aboutMe{
     padding-top:100px ;
 }
+/* .aboutMe>h2 {
+   
+    text-align: center;
+    padding: 5px;
+    background: #fff;
+    font-size: 30px;
+    color: #0D0D0D;
+   
+} */
+
 .aboutBox{
     height: 600px;
-    border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
 }
-.aboutBox h2 {
-    padding:10px 0px 10px 50px;
+
+.aboutBox .information{
+    width: 37%;
+}
+.aboutBox .information h2 {
+    text-align: center;
+    color: #fff;
+    padding: 15px 0px;
+    border-bottom: 1px dashed #fff;
+    font-size:25px;
+    font-weight: bold;
+    position: relative;
+}
+.aboutBox .information h2::after {
+    content: 'NO.15031995';
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    bottom: -28px;
+    right: 5px;
+    
+}
+.aboutBox .information .infoBox {
+    margin-top: 15px;
+    color: #fff;
+
+}
+.aboutBox .information .infoBox li {
+    font-size: 20px;
+    padding: 10px 30px;
+}
+.aboutBox .information .infoBox li p {
+    margin-bottom: 7px;
+}
+.aboutBox .information .infoBox li p:nth-of-type(1){
+    width: 150px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    color: #0D0D0D;
+}
+
+.aboutBox .information .infoBox li:nth-of-type(1),
+.aboutBox .information .infoBox li:nth-of-type(2),
+.aboutBox .information .infoBox li:nth-of-type(3),
+.aboutBox .information .infoBox li:nth-of-type(4),
+.aboutBox .information .infoBox li:nth-of-type(5){
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+.aboutBox .information.on .infoBox li:nth-of-type(1){
+    animation:fadeInDown 1.5s both 0.8s;
+}
+.aboutBox .information.on .infoBox li:nth-of-type(2){
+    animation:fadeInDown 1.5s both 0.6s;
+}
+.aboutBox .information.on .infoBox li:nth-of-type(3){
+    animation:fadeInDown 1.5s both 0.4s;
+}
+.aboutBox .information.on .infoBox li:nth-of-type(4){
+    animation:fadeInDown 1.5s both 0.2s;
+}
+.aboutBox .information.on .infoBox li:nth-of-type(5){
+  animation:fadeInDown 1.5s both;
+}
+
+
+.aboutBox .information02 {
+    width: 57%;
     border: 1px solid #fff;
-    font-size: 30px;
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+.aboutBox .information02.on{
+display: block;
+animation:fadeInRight 1.5s both;
+}
+
+
+.aboutBox .information02>h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0D0D0D;
+    padding: 5px 30px;
+    background: #fff;
+    margin: 15px;
+}
+.aboutBox .information02Inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutBox .information02Inner div>h2 {
+    text-align: center;
+    font-size: 23px;
+    background: #fff;
+    width: 150px;
+    margin: 10px 15px;
+}
+
+.aboutBox .information02Inner div ul>li{
+    font-size: 20px;
+    margin: 10px 15px;
     color: #fff;
 }
 
+.aboutBox .information02Inner div ul>li span {
+    font-weight: bold;
+}
+.aboutBox .information02Inner div:nth-of-type(1){
+    width: 40%;
+    border-right: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+}
+.aboutBox .information02Inner div:nth-of-type(2){
+    padding-left: 10px;
+    width:60%;
+    border-bottom: 1px dashed #fff;
+}
+.aboutBox .information02Inner div:nth-of-type(3){
+    margin-top: 15px;
+    border-bottom: 1px dashed #fff;
+}
+.aboutBox .information02Inner div:nth-of-type(3) h2{
+    margin-top: 15px;
+}
+.aboutBox .information02Inner div:nth-of-type(3) ul{
+display: flex;
+justify-content: center;
+margin: 15px 0;
+}
+.aboutBox .information02Inner div:nth-of-type(3) ul li {
+    text-align: center;
+}
+.aboutBox .information02Inner div:nth-of-type(4) {
+    margin-top: 20px;
+}
+.aboutBox .information02Inner div:nth-of-type(4) ul{
+    margin-top: 25px;
+}
+
+
+
 
 /*page-5 Contact */
-.contactBox>h2 {
-    padding-top: 90px;
+.contact{
+    height: 700px;
+    padding-top:100px;
+    position: relative;
+}
+.contactBox {
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
     text-align: center;
-    font-size: 40px;
+   background: #fff;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform :translateX(-50%);
 }
-
-.contactBox>h2>span {
-    background: linear-gradient(50deg, #Ff0061, #Fec194);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-}
-
-.contactInner {
-    padding: 10px 100px;
-
-}
-
-.contactInner a {
-    text-align: center;
+.contactBox>h2{
+    padding-top: 20px;
     font-size: 30px;
-    display: block;
-    margin: 50px 0;
-    padding: 10px;
     font-weight: bold;
-    transition: all 0.3s;
-    border: 1px solid #FC443F;
-    border-radius: 50px;
 }
 
-.contactInner a:nth-child(1),
-.contactInner a:nth-child(2) .contactInner a:nth-child(3) {
+.contactBox ul li {
+    margin-top: 50PX;
+    font-size: 20px;
+    color:#000;
+    text-align: center;
+
+}
+.contactBox ul li:nth-of-type(1),
+.contactBox ul li:nth-of-type(2),
+.contactBox ul li:nth-of-type(3){
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
 }
-
-.contactInner.on a:nth-child(1) {
-    animation: fadeInUp 1.3s both;
+.contactBox.on ul li:nth-of-type(1){
+    animation: fadeInUp 1.5s both;
+}
+.contactBox.on ul li:nth-of-type(2) {
+    animation: fadeInUp 1.5s both 0.3s;
+}
+.contactBox.on ul li:nth-of-type(3){
+  animation: fadeInUp 1.5s both 0.6s;
 }
 
-.contactInner.on a:nth-child(2) {
-    animation: fadeInUp 1.3s both 0.2s;
-}
 
-.contactInner.on a:nth-child(3) {
-    animation: fadeInUp 1.3s both 0.5s;
-}
 
-.contactInner a:hover {
-    background: #FC443F;
-    border-radius: 50px;
+.contactBox ul li>p:nth-of-type(1){
+    margin: 0 auto;
+    width: 150px;
+    background: #0D0D0D;
     color: #fff;
 }
-
-.gotop {
-    display: none;
-    padding: 10px 0;
-    border-radius: 10px;
-    position: fixed;
-    right:2.55%;
-    bottom: 3%;
-    z-index: 99999999;
-    opacity: 0;
-    font-size: 20px;
-    font-weight:900 ;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-
+.contactBox ul li>p:nth-of-type(2) {
+margin-top: 10px;
 }
+.contactBox >p{
+   margin-top: 55px;
+}
+
+
 
 .gotop.on {
     display: block;
