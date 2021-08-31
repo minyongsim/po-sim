@@ -1180,6 +1180,7 @@ margin: 15px 0;
     height: 500px;
     text-align: center;
    background: #fff;
+   box-shadow:0px 1px 10px 5px #ddd;
     color: #000;
     position: absolute;
     bottom: 0;
