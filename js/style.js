@@ -1,28 +1,28 @@
 $(function ($) {
 
-    // var aniBox = 0
-    // var introAni = setInterval(timer, 10)
-    // function timer() {
-    //     aniBox++
-    //     $('.introAni .introAniInner .aniBox').css({
-    //         width: aniBox+'%'
-    //     })
-    //     // 100%까지 가면 사라지기
-    //     if (aniBox === 101) {
-    //         clearInterval(introAni)
-    //         $('.introAni').fadeOut(100)
-    //         return false
-    //     }
-    //     // 퍼센트 숫자세기
-    //     $('.introAni .percent').text(aniBox+'%')
-    // }
+    var aniBox = 0
+    var introAni = setInterval(timer, 10)
+    function timer() {
+        aniBox++
+        $('.introAni .introAniInner .aniBox').css({
+            width: aniBox+'%'
+        })
+        // 100%까지 가면 사라지기
+        if (aniBox === 101) {
+            clearInterval(introAni)
+            $('.introAni').fadeOut(100)
+            return false
+        }
+        // 퍼센트 숫자세기
+        $('.introAni .percent').text(aniBox+'%')
+    }
 
 
-    // window.onload = function() {
-    //     setTimeout (function () {
-    //      scrollTo(0,0);
-    //     }, 100); 
-    //    }
+    window.onload = function() {
+        setTimeout (function () {
+         scrollTo(0,0);
+        }, 100); 
+       }
 
     // 메뉴 스크롤 이벤트
     var $menu = $('#header .headerBox .menuBox li , .home .home_menu > li'),
@@ -128,9 +128,9 @@ $(function ($) {
         var scrollEvent = $(this).scrollTop()
         var page1Event = $('.page-1').offset().top - $(this).height()/2
         if (scrollEvent >= page1Event && scrollEvent <= $('.page-1').offset().top  ) {
-             $('.home_glitch,.home_graphic,.scrollDown').show()
+             $('.home_glitch,.home_graphic,.scrollDown,.j01 ,.j02').show()
         } else {
-            $('.home_glitch,.home_graphic,.scrollDown').hide()
+            $('.home_glitch,.home_graphic,.scrollDown,.j01 ,.j02').hide()
         };
         var page2Event = $('.page-2').offset().top - $(this).height()/2
         if (scrollEvent >= page2Event && scrollEvent <= $('.page-2').offset().top  ) {

@@ -118,9 +118,9 @@ body {
 }
 .menuBox>li a span:nth-of-type(2) {
     display: block;
-    position: relative;
 }
 .menuBox>li.active a span:nth-of-type(2){
+    text-align: center;
     display: none;
 }
 
@@ -407,112 +407,46 @@ body {
         opacity: 0;
     }
 }
-
-
-/*locon_glitch  */
-.locon_glitch{
-    height: 100%;
-    position: relative;
-}
-.locon_glitch>li{
+/* j01,j02 */
+.j01{
     position: absolute;
-    top:3%;
-    left: 33%;
-    text-align: center;
-    width: 60px;
-    border-radius: 10px;
-    height: 50px;
-    font-size: 30px;
-    color: #0D0D0D;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 20px;
+    opacity: 0;
     background: #fff;
-    border: 1px solid #0D0D0D;
+    animation: j01 3s both 3s;
 }
-.locon_glitch>li:nth-of-type(2){
-    opacity: 0;
-    animation: lg2 1.5s both;
-}
-.locon_glitch>li:nth-of-type(3){
-    opacity: 0;
-    animation: lg3 1.5s both;
-}
-.locon_glitch>li:nth-of-type(4){
-    opacity: 0;
-    animation: lg4 1.5s both;
-}
-.locon_glitch>li:nth-of-type(5){
-    opacity: 0;
-    animation: lg5 1.5s both;
-}
-.locon_glitch>li:nth-of-type(6){
-    opacity: 0;
-    animation: lg6 1.5s both;
-}
-.locon_glitch>li:nth-of-type(7){
-    opacity: 0;
-    animation: lg7 1.5s both;
-}
-@keyframes lg2 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 35%;
-    }
-}
-@keyframes lg3 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 37%;
-    }
-}
-@keyframes lg4 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 39%;
-    }
-}
-@keyframes lg5 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 41%;
-    }
-}
-@keyframes lg6 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 43%;
-    }
-}
-@keyframes lg7 {
-    0%{
-        opacity: 0;
-        left: 33%;
-    }
-    100%{
-        opacity: 1;
-        left: 45%;
-    }
+.j02{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    width: 20px;
+    background: #fff;
+    animation: j02 3s both 3s;
 }
 
-
+@keyframes j01{
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+         height: 11%;
+    }
+}
+@keyframes j02{
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+         height: 20%;
+    }
+}
 
 /* scrollDown */
 .scrollDown {
@@ -1312,7 +1246,7 @@ margin-top: 10px;
 }
 
 .gotop > img {
-text-align: center;
+    text-align: center;
   width: 50px;
 }
 
