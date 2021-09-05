@@ -1,21 +1,21 @@
 $(function ($) {
 
-    var aniBox = 0
-    var introAni = setInterval(timer, 10)
-    function timer() {
-        aniBox++
-        $('.introAni .introAniInner .aniBox').css({
-            width: aniBox+'%'
-        })
-        // 100%까지 가면 사라지기
-        if (aniBox === 101) {
-            clearInterval(introAni)
-            $('.introAni').fadeOut(100)
-            return false
-        }
-        // 퍼센트 숫자세기
-        $('.introAni .percent').text(aniBox+'%')
-    }
+    // var aniBox = 0
+    // var introAni = setInterval(timer, 10)
+    // function timer() {
+    //     aniBox++
+    //     $('.introAni .introAniInner .aniBox').css({
+    //         width: aniBox+'%'
+    //     })
+    //     // 100%까지 가면 사라지기
+    //     if (aniBox === 101) {
+    //         clearInterval(introAni)
+    //         $('.introAni').fadeOut(100)
+    //         return false
+    //     }
+    //     // 퍼센트 숫자세기
+    //     $('.introAni .percent').text(aniBox+'%')
+    // }
 
 
     window.onload = function() {
@@ -128,9 +128,11 @@ $(function ($) {
         var scrollEvent = $(this).scrollTop()
         var page1Event = $('.page-1').offset().top - $(this).height()/2
         if (scrollEvent >= page1Event && scrollEvent <= $('.page-1').offset().top  ) {
-             $('.home_glitch,.home_graphic,.scrollDown,.j01 ,.j02').show()
+             $('.hg01,.hg02,.hg03,.hg41,.hg42,.hg43,.hg51,.hg52,.hg53,.rotate,.rotate01,.scrollDown').show()
+             
         } else {
-            $('.home_glitch,.home_graphic,.scrollDown,.j01 ,.j02').hide()
+            $('.hg01,.hg02,.hg03,.hg41,.hg42,.hg43,.hg51,.hg52,.hg53,.rotate,.rotate01,.scrollDown').hide()
+           
         };
         var page2Event = $('.page-2').offset().top - $(this).height()/2
         if (scrollEvent >= page2Event && scrollEvent <= $('.page-2').offset().top  ) {
@@ -144,7 +146,7 @@ $(function ($) {
         } else {  
             $('.skillcontainer02').removeClass('on')
         };
-        var d1= 0 ,d2= 0, e1= 0 ,e2= 0,e3= 0 ,c1= 0 ,c2= 0,c3= 0,c4= 0 ,c5= 0;
+       
         timeCounter();
         var page4Event = $('.page-4').offset().top - $(this).height() / 2
         if (scrollEvent >= page4Event && scrollEvent <= $('.page-4').offset().top) {
